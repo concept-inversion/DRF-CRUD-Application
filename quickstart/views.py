@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from quickstart.serializers import UserSerializer, GroupSerializer
+from quickstart.serializers import UserSerializer, GroupSerializer, PersonalSerializer
+from .models import Personal
 # Create your views here.
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -13,3 +14,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+class PersonalViewSet(viewsets.ModelViewSet):
+    queryset = Personal.objects.all()
+    serializer_class = PersonalSerializer
