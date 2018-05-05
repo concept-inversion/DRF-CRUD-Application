@@ -15,6 +15,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
-class PersonalViewSet(viewsets.ModelViewSet):
-    queryset = Personal.objects.all()
-    serializer_class = PersonalSerializer
+def PersonalViewSet(request):
+    if 
+        queryset = Personal.objects.all()
+        serializer_class = PersonalSerializer
